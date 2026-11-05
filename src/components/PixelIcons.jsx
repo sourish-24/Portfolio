@@ -254,193 +254,27 @@ export function PixelFolder({ size = 36 }) {
   );
 }
 
-// ============================================================
-// PIXEL TECH LOGOS FOR WHITEBOARD TIER LIST (14x14)
-// ============================================================
-
-export function PixelReactIcon({ size = 14 }) {
+export function PixelStudyResources({ size = 36 }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 14 14" fill="none" style={{ shapeRendering: 'crispEdges' }}>
-      <rect x="6" y="6" width="2" height="2" fill="#00d8ff" />
-      {/* Atom orbit pixels */}
-      <rect x="5" y="2" width="4" height="1" fill="#00d8ff" />
-      <rect x="5" y="11" width="4" height="1" fill="#00d8ff" />
-      <rect x="2" y="5" width="1" height="4" fill="#00d8ff" />
-      <rect x="11" y="5" width="1" height="4" fill="#00d8ff" />
-      <rect x="3" y="3" width="2" height="1" fill="#00d8ff" />
-      <rect x="9" y="3" width="2" height="1" fill="#00d8ff" />
-      <rect x="3" y="10" width="2" height="1" fill="#00d8ff" />
-      <rect x="9" y="10" width="2" height="1" fill="#00d8ff" />
-    </svg>
-  );
-}
-
-export function PixelJSIcon({ size = 14 }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 14 14" fill="none" style={{ shapeRendering: 'crispEdges' }}>
-      <rect x="1" y="1" width="12" height="12" fill="#f7df1e" />
-      {/* J */}
-      <rect x="4" y="7" width="1" height="3" fill="#000000" />
-      <rect x="5" y="9" width="2" height="1" fill="#000000" />
-      <rect x="6" y="5" width="1" height="5" fill="#000000" />
-      {/* S */}
-      <rect x="8" y="5" width="3" height="1" fill="#000000" />
-      <rect x="8" y="6" width="1" height="1" fill="#000000" />
-      <rect x="8" y="7" width="3" height="1" fill="#000000" />
-      <rect x="10" y="8" width="1" height="1" fill="#000000" />
-      <rect x="8" y="9" width="3" height="1" fill="#000000" />
-    </svg>
-  );
-}
-
-export function PixelTSIcon({ size = 14 }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 14 14" fill="none" style={{ shapeRendering: 'crispEdges' }}>
-      <rect x="1" y="1" width="12" height="12" fill="#3178c6" />
-      {/* T */}
-      <rect x="3" y="5" width="4" height="1" fill="#ffffff" />
-      <rect x="4" y="6" width="2" height="4" fill="#ffffff" />
-      {/* S */}
-      <rect x="8" y="5" width="3" height="1" fill="#ffffff" />
-      <rect x="8" y="6" width="1" height="1" fill="#ffffff" />
-      <rect x="8" y="7" width="3" height="1" fill="#ffffff" />
-      <rect x="10" y="8" width="1" height="1" fill="#ffffff" />
-      <rect x="8" y="9" width="3" height="1" fill="#ffffff" />
-    </svg>
-  );
-}
-
-export function PixelNodeIcon({ size = 14 }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 14 14" fill="none" style={{ shapeRendering: 'crispEdges' }}>
-      {/* Green Hexagon */}
-      <rect x="4" y="1" width="6" height="1" fill="#339933" />
-      <rect x="2" y="2" width="10" height="10" fill="#339933" />
-      <rect x="4" y="12" width="6" height="1" fill="#339933" />
-      {/* N letter */}
-      <rect x="4" y="4" width="2" height="6" fill="#ffffff" />
-      <rect x="8" y="4" width="2" height="6" fill="#ffffff" />
-      <rect x="6" y="6" width="2" height="2" fill="#ffffff" />
-    </svg>
-  );
-}
-
-export function PixelPythonIcon({ size = 14 }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 14 14" fill="none" style={{ shapeRendering: 'crispEdges' }}>
-      {/* Blue top snake */}
-      <rect x="3" y="2" width="5" height="5" fill="#387eb8" />
-      <rect x="8" y="4" width="3" height="3" fill="#387eb8" />
-      <rect x="4" y="3" width="1" height="1" fill="#ffffff" />
-      {/* Yellow bottom snake */}
-      <rect x="6" y="7" width="5" height="5" fill="#ffe052" />
-      <rect x="3" y="7" width="3" height="3" fill="#ffe052" />
-      <rect x="9" y="10" width="1" height="1" fill="#000000" />
-    </svg>
-  );
-}
-
-export function PixelCppIcon({ size = 14 }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 14 14" fill="none" style={{ shapeRendering: 'crispEdges' }}>
-      <rect x="1" y="1" width="12" height="12" fill="#00599c" />
-      {/* C */}
-      <rect x="3" y="4" width="3" height="1" fill="#ffffff" />
-      <rect x="3" y="5" width="1" height="4" fill="#ffffff" />
-      <rect x="3" y="9" width="3" height="1" fill="#ffffff" />
-      {/* ++ */}
-      <rect x="7" y="6" width="3" height="1" fill="#659ad2" />
-      <rect x="8" y="5" width="1" height="3" fill="#659ad2" />
-      <rect x="10" y="6" width="3" height="1" fill="#659ad2" />
-      <rect x="11" y="5" width="1" height="3" fill="#659ad2" />
-    </svg>
-  );
-}
-
-export function PixelGoIcon({ size = 14 }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 14 14" fill="none" style={{ shapeRendering: 'crispEdges' }}>
-      <rect x="1" y="1" width="12" height="12" fill="#00add8" />
-      {/* G */}
-      <rect x="3" y="4" width="3" height="1" fill="#ffffff" />
-      <rect x="3" y="5" width="1" height="4" fill="#ffffff" />
-      <rect x="3" y="9" width="4" height="1" fill="#ffffff" />
-      <rect x="6" y="7" width="1" height="2" fill="#ffffff" />
-      <rect x="5" y="7" width="1" height="1" fill="#ffffff" />
-      {/* O */}
-      <rect x="8" y="4" width="3" height="6" fill="#ffffff" />
-      <rect x="9" y="5" width="1" height="4" fill="#00add8" />
-    </svg>
-  );
-}
-
-export function PixelMongoIcon({ size = 14 }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 14 14" fill="none" style={{ shapeRendering: 'crispEdges' }}>
-      {/* Leaf shape */}
-      <rect x="6" y="1" width="2" height="2" fill="#47a248" />
-      <rect x="5" y="3" width="4" height="4" fill="#47a248" />
-      <rect x="4" y="6" width="6" height="5" fill="#47a248" />
-      <rect x="6" y="11" width="2" height="2" fill="#3fa037" />
-      {/* Leaf center vein */}
-      <rect x="6" y="3" width="1" height="8" fill="#ffffff" />
-    </svg>
-  );
-}
-
-export function PixelPostgresIcon({ size = 14 }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 14 14" fill="none" style={{ shapeRendering: 'crispEdges' }}>
-      <rect x="1" y="1" width="12" height="12" fill="#336791" />
-      <rect x="3" y="4" width="6" height="6" fill="#ffffff" />
-      <rect x="4" y="5" width="1" height="1" fill="#336791" />
-      <rect x="7" y="6" width="4" height="4" fill="#ffffff" />
-      <rect x="9" y="8" width="1" height="3" fill="#ffffff" />
-    </svg>
-  );
-}
-
-export function PixelDockerIcon({ size = 14 }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 14 14" fill="none" style={{ shapeRendering: 'crispEdges' }}>
-      <rect x="1" y="1" width="12" height="12" fill="#0db7ed" />
-      {/* Containers */}
-      <rect x="3" y="4" width="2" height="2" fill="#ffffff" />
-      <rect x="6" y="4" width="2" height="2" fill="#ffffff" />
-      <rect x="4" y="6" width="2" height="2" fill="#ffffff" />
-      <rect x="7" y="6" width="2" height="2" fill="#ffffff" />
-      {/* Whale body */}
-      <rect x="2" y="8" width="8" height="3" fill="#ffffff" />
-      <rect x="10" y="7" width="2" height="3" fill="#ffffff" />
-    </svg>
-  );
-}
-
-export function PixelAWSIcon({ size = 14 }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 14 14" fill="none" style={{ shapeRendering: 'crispEdges' }}>
-      <rect x="1" y="1" width="12" height="12" fill="#232f3e" />
-      {/* Letters */}
-      <rect x="3" y="4" width="3" height="3" fill="#ff9900" />
-      <rect x="7" y="4" width="4" height="3" fill="#ff9900" />
-      {/* Orange smile curve */}
-      <rect x="3" y="9" width="8" height="1" fill="#ff9900" />
-      <rect x="9" y="8" width="2" height="1" fill="#ff9900" />
-    </svg>
-  );
-}
-
-export function PixelGitIcon({ size = 14 }) {
-  return (
-    <svg width={size} height={size} viewBox="0 0 14 14" fill="none" style={{ shapeRendering: 'crispEdges' }}>
-      <rect x="1" y="1" width="12" height="12" fill="#f05032" />
-      {/* Branch nodes */}
-      <rect x="4" y="4" width="2" height="2" fill="#ffffff" />
-      <rect x="4" y="9" width="2" height="2" fill="#ffffff" />
-      <rect x="9" y="6" width="2" height="2" fill="#ffffff" />
-      {/* Branch lines */}
-      <rect x="4" y="6" width="1" height="3" fill="#ffffff" />
-      <rect x="5" y="7" width="4" height="1" fill="#ffffff" />
+    <svg width={size} height={size} viewBox="0 0 16 16" fill="none" style={{ shapeRendering: 'crispEdges' }}>
+      {/* Pixel Stack of Study Textbooks / Knowledge Tome */}
+      {/* Top book: Blue / Cyan cover */}
+      <rect x="3" y="2" width="9" height="3" fill="#2563eb" />
+      <rect x="4" y="3" width="7" height="1" fill="#60a5fa" />
+      <rect x="12" y="2" width="2" height="3" fill="#fef08a" />
+      {/* Middle book: Purple cover with ribbon */}
+      <rect x="2" y="6" width="11" height="3" fill="#7c3aed" />
+      <rect x="3" y="7" width="9" height="1" fill="#a78bfa" />
+      <rect x="13" y="6" width="2" height="3" fill="#fef08a" />
+      {/* Red bookmark ribbon dropping down */}
+      <rect x="7" y="7" width="2" height="6" fill="#ef4444" />
+      <rect x="6" y="13" width="2" height="2" fill="#b91c1c" />
+      {/* Bottom book: Gold / Emerald tome */}
+      <rect x="1" y="10" width="13" height="4" fill="#047857" />
+      <rect x="2" y="11" width="11" height="2" fill="#10b981" />
+      <rect x="14" y="10" width="1" height="4" fill="#fef08a" />
+      {/* Golden star badge / glow on top */}
+      <rect x="7" y="1" width="2" height="1" fill="#fbbf24" />
     </svg>
   );
 }

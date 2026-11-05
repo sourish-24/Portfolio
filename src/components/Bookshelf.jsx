@@ -9,10 +9,10 @@ import {
   PixelFloppy,
   PixelBook,
   PixelController,
-  PixelPlant
+  PixelStudyResources
 } from './PixelIcons';
 
-export default function Bookshelf({ isDark, onSelectWhiteboard, activeWhiteboardMode }) {
+export default function Bookshelf({ isDark, onOpenModal }) {
   const handleItemClick = (action, e) => {
     if (typeof action === 'function') {
       e.preventDefault();
@@ -56,8 +56,9 @@ export default function Bookshelf({ isDark, onSelectWhiteboard, activeWhiteboard
     {
       id: 'dsasheet',
       label: 'DSA SHEET',
-      tag: 'Show on Board',
-      action: () => onSelectWhiteboard?.('dsasheet'),
+      tag: 'Google Sheets',
+      href: 'https://docs.google.com/spreadsheets/d/1ANEzJSdgeWEKKOZcmaRdQgj-D2k8r4BqAuAHaXwWXkI/edit?usp=sharing',
+      isExternal: true,
       renderIcon: () => <PixelGoogleSheets size={36} />,
     },
     {
@@ -71,30 +72,30 @@ export default function Bookshelf({ isDark, onSelectWhiteboard, activeWhiteboard
     {
       id: 'projects',
       label: 'PROJECTS',
-      tag: 'Show on Board',
-      action: () => onSelectWhiteboard?.('projects'),
+      tag: '3 Demos',
+      action: () => onOpenModal('projects'),
       renderIcon: () => <PixelFloppy size={36} color="#6366f1" />,
     },
     {
       id: 'skills',
       label: 'SKILLS',
-      tag: 'Show on Board',
-      action: () => onSelectWhiteboard?.('skills'),
+      tag: 'Tech Stack',
+      action: () => onOpenModal('skills'),
       renderIcon: () => <PixelController size={36} color="#10b981" />,
     },
     {
       id: 'about',
       label: 'ABOUT ME',
-      tag: 'Show on Board',
-      action: () => onSelectWhiteboard?.('about'),
+      tag: 'Bio & Story',
+      action: () => onOpenModal('about'),
       renderIcon: () => <PixelBook size={36} color="#ef4444" />,
     },
     {
-      id: 'plant',
-      label: 'SUCCULENT',
-      tag: 'Water Me',
-      action: () => {},
-      renderIcon: () => <PixelPlant size={36} />,
+      id: 'study-resources',
+      label: 'MY STUDY RES',
+      tag: 'My Study Resources',
+      action: () => onOpenModal('study-resources'),
+      renderIcon: () => <PixelStudyResources size={36} />,
     },
   ];
 
@@ -117,7 +118,9 @@ export default function Bookshelf({ isDark, onSelectWhiteboard, activeWhiteboard
                 {cubby.renderIcon()}
               </div>
               <div className="cubby-plaque brass-textbox-plaque">
-                <span className="cubby-label brass-textbox-label">{cubby.label}</span>
+                <span className={`cubby-label brass-textbox-label ${cubby.id === 'study-resources' ? 'label-study-res' : ''}`}>
+                  {cubby.label}
+                </span>
               </div>
               <div className="cubby-tooltip">
                 <span className="tooltip-tag">{cubby.tag}</span>
@@ -125,8 +128,6 @@ export default function Bookshelf({ isDark, onSelectWhiteboard, activeWhiteboard
               </div>
             </div>
           );
-
-          const isActive = activeWhiteboardMode === cubby.id;
 
           if (cubby.isExternal) {
             return (
@@ -147,7 +148,7 @@ export default function Bookshelf({ isDark, onSelectWhiteboard, activeWhiteboard
             <button
               key={cubby.id}
               type="button"
-              className={`cubby-cell interactive-button ${isActive ? 'cubby-active-selection' : ''}`}
+              className="cubby-cell interactive-button"
               onClick={(e) => handleItemClick(cubby.action, e)}
               title={`${cubby.label} - ${cubby.tag}`}
             >

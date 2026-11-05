@@ -4,13 +4,13 @@ import Bookshelf from './components/Bookshelf';
 import StudyDesk from './components/StudyDesk';
 import WindowView from './components/WindowView';
 import WallDecor from './components/WallDecor';
-import Whiteboard from './components/Whiteboard';
+import PixelModal from './components/PixelModal';
 import './styles/global.css';
 import './styles/scene.css';
 
 export default function App() {
   const [isDark, setIsDark] = useState(true);
-  const [whiteboardMode, setWhiteboardMode] = useState('skills');
+  const [activeModal, setActiveModal] = useState(null);
 
   const toggleTheme = () => {
     setIsDark((prev) => !prev);
@@ -32,12 +32,6 @@ export default function App() {
           <WindowView isDark={isDark} />
         </div>
 
-        {/* WIDE WHITEBOARD DIRECTLY BELOW WINDOW */}
-        <Whiteboard
-          mode={whiteboardMode}
-          onSelectMode={(mode) => setWhiteboardMode(mode)}
-        />
-
         {/* ROOM HARDWOOD FLOOR (NO CARPET) */}
         <div className="room-hardwood-floor">
           <div className="floor-planks-pattern"></div>
@@ -55,14 +49,19 @@ export default function App() {
         {/* SQUARE GRID BOOKSHELF (ON THE RIGHT) */}
         <Bookshelf
           isDark={isDark}
-          activeWhiteboardMode={whiteboardMode}
-          onSelectWhiteboard={(mode) => setWhiteboardMode(mode)}
+          onOpenModal={(tab) => setActiveModal(tab)}
         />
 
         {/* LAMP LIGHT CONE & VOLUMETRIC ROOM ILLUMINATION */}
         <div className={`volumetric-lamp-beam ${isDark ? 'beam-active' : 'beam-hidden'}`} aria-hidden="true"></div>
         <div className={`dark-vignette-overlay ${isDark ? 'vignette-active' : 'vignette-hidden'}`} aria-hidden="true"></div>
       </main>
+
+      {/* POPUP RETRO MODAL FOR ABOUT / PROJECTS / SKILLS / CONTACT */}
+      <PixelModal
+        activeTab={activeModal}
+        onClose={() => setActiveModal(null)}
+      />
     </div>
   );
 }
