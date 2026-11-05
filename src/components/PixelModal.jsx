@@ -4,7 +4,9 @@ import {
   PixelFloppy,
   PixelController,
   PixelStudyResources,
-  PixelMail
+  PixelMail,
+  PixelGoldenTrophy,
+  PixelSilverTrophy
 } from './PixelIcons';
 
 export default function PixelModal({ activeTab, onClose }) {
@@ -53,6 +55,18 @@ export default function PixelModal({ activeTab, onClose }) {
           title: 'MY_STUDY_RESOURCES.LOG',
           icon: <PixelStudyResources size={18} />,
           status: 'CURATED LEARNING VAULT // UPDATED FOR CURRENT SPRINT'
+        };
+      case 'trophy-innovate':
+        return {
+          title: 'WINNER_INNOVATE_2.0.EXE',
+          icon: <PixelGoldenTrophy size={18} />,
+          status: '1ST PLACE // INNOVATE 2.0 HACKATHON 2024'
+        };
+      case 'trophy-leetcode':
+        return {
+          title: 'LEETCODE_RANK_931.LOG',
+          icon: <PixelSilverTrophy size={18} />,
+          status: 'GLOBAL RANK 931 // BIWEEKLY CONTEST'
         };
       case 'contact':
         return {
@@ -529,6 +543,201 @@ export default function PixelModal({ activeTab, onClose }) {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'trophy-innovate' && (
+            <div className="pane-trophy pane-trophy-gold">
+              {/* HERO BANNER */}
+              <div className="trophy-modal-hero hero-gold">
+                <div className="trophy-hero-icon-box gold-glow">
+                  <PixelGoldenTrophy size={64} />
+                </div>
+                <div className="trophy-hero-meta">
+                  <span className="trophy-tier-badge badge-gold">🥇 1ST PLACE WINNER</span>
+                  <h3>INNOVATE 2.0 HACKATHON 2024</h3>
+                  <p className="trophy-subtitle">National Technical Hackathon & Innovation Challenge</p>
+                </div>
+              </div>
+
+              {/* DETAILS CARD */}
+              <div className="trophy-details-card">
+                <h4 className="detail-section-title">🏆 HACKATHON OVERVIEW & WINNING SOLUTION</h4>
+                <p className="trophy-narrative">
+                  Secured <strong>1st Place</strong> among 100+ competing engineering teams. Designed and engineered
+                  an end-to-end distributed geospatial platform tackling real-time spatial clustering, dynamic routing,
+                  and sub-50ms location lookups under high concurrent traffic.
+                </p>
+
+                <div className="trophy-specs-grid">
+                  <div className="spec-item">
+                    <span className="spec-k">COMPETITION:</span>
+                    <span className="spec-v">INNOVATE 2.0 (2024)</span>
+                  </div>
+                  <div className="spec-item">
+                    <span className="spec-k">RESULT:</span>
+                    <span className="spec-v gold-text">1st Place / Overall Winner</span>
+                  </div>
+                  <div className="spec-item">
+                    <span className="spec-k">DOMAIN:</span>
+                    <span className="spec-v">Geospatial & Distributed Systems</span>
+                  </div>
+                  <div className="spec-item">
+                    <span className="spec-k">TEAM ROLE:</span>
+                    <span className="spec-v">Lead Architect & Backend Engineer</span>
+                  </div>
+                </div>
+
+                <div className="trophy-highlights-block">
+                  <span className="hl-title">⚡ KEY ARCHITECTURAL CONTRIBUTIONS:</span>
+                  <ul className="trophy-bullet-list">
+                    <li>
+                      <strong>Uber H3 Spatial Binning:</strong> Implemented discrete global grid indexing for hexagonal coordinate clustering, dramatically reducing spatial query compute time to &lt;50ms.
+                    </li>
+                    <li>
+                      <strong>Real-Time Stream Processing:</strong> Handled bi-directional telemetry streaming via WebSockets / Socket.IO with dynamic cluster recalculations.
+                    </li>
+                    <li>
+                      <strong>In-Memory Caching Layer:</strong> Engineered high-throughput caching in Redis with automated TTL invalidation and low-latency reads.
+                    </li>
+                    <li>
+                      <strong>Production-Ready Architecture:</strong> Commended by the judging panel for rigorous API design, fault-tolerant concurrent workers, and live benchmark demonstration.
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="trophy-tech-stack-row">
+                  <span className="stack-label">TECH STACK:</span>
+                  <div className="stack-tags">
+                    <span className="p-tag">Golang</span>
+                    <span className="p-tag">Uber H3</span>
+                    <span className="p-tag">Redis</span>
+                    <span className="p-tag">Socket.IO</span>
+                    <span className="p-tag">Node.js</span>
+                    <span className="p-tag">Leaflet.js</span>
+                    <span className="p-tag">Docker</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="modal-actions-row">
+                <a
+                  href="https://github.com/sourish-24"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="pixel-btn-action btn-gold"
+                >
+                  🐙 VIEW GITHUB REPOSITORY ↗
+                </a>
+                <a
+                  href="/Portfolio/Sourish_Musib_Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="pixel-btn-action"
+                >
+                  📄 VIEW RESUME (PDF) ↗
+                </a>
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'trophy-leetcode' && (
+            <div className="pane-trophy pane-trophy-silver">
+              {/* HERO BANNER */}
+              <div className="trophy-modal-hero hero-silver">
+                <div className="trophy-hero-icon-box silver-glow">
+                  <PixelSilverTrophy size={64} />
+                </div>
+                <div className="trophy-hero-meta">
+                  <span className="trophy-tier-badge badge-silver">🥈 GLOBAL RANK 931</span>
+                  <h3>LEETCODE BIWEEKLY CONTEST</h3>
+                  <p className="trophy-subtitle">Top 1% Worldwide Finish among 30,000+ Competitive Programmers</p>
+                </div>
+              </div>
+
+              {/* DETAILS CARD */}
+              <div className="trophy-details-card">
+                <h4 className="detail-section-title">⚡ CONTEST BENCHMARK & PROBLEM SOLVING</h4>
+                <p className="trophy-narrative">
+                  Achieved an outstanding <strong>Global Rank 931</strong> in the LeetCode Biweekly Contest, solving
+                  high-difficulty algorithmic and data structure problems under intense time constraints with optimal
+                  asymptotic complexities and zero penalty submissions.
+                </p>
+
+                <div className="trophy-specs-grid">
+                  <div className="spec-item">
+                    <span className="spec-k">GLOBAL RANK:</span>
+                    <span className="spec-v silver-text">#931 Worldwide</span>
+                  </div>
+                  <div className="spec-item">
+                    <span className="spec-k">PERCENTILE:</span>
+                    <span className="spec-v">Top 1% Globally</span>
+                  </div>
+                  <div className="spec-item">
+                    <span className="spec-k">HANDLE:</span>
+                    <span className="spec-v">sourishmusib</span>
+                  </div>
+                  <div className="spec-item">
+                    <span className="spec-k">PROBLEMS:</span>
+                    <span className="spec-v">Solved (All Testcases Passed)</span>
+                  </div>
+                </div>
+
+                <div className="trophy-highlights-block">
+                  <span className="hl-title">🧠 ALGORITHMIC MASTERY DEMONSTRATED:</span>
+                  <ul className="trophy-bullet-list">
+                    <li>
+                      <strong>Advanced Dynamic Programming:</strong> Multi-dimensional state formulations, bitmask optimizations, and digit DP.
+                    </li>
+                    <li>
+                      <strong>Graph Theory & Trees:</strong> Dijkstra shortest path, Disjoint Set Union (DSU with union by rank & path compression), tree queries.
+                    </li>
+                    <li>
+                      <strong>Range Queries & Segment Trees:</strong> Sub-linear interval lookups and point/range updates in O(log N).
+                    </li>
+                    <li>
+                      <strong>Optimal Time Complexity:</strong> Engineered space- and time-optimal solutions avoiding TLE (Time Limit Exceeded) traps.
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="trophy-tech-stack-row">
+                  <span className="stack-label">PROFILES & TRACKERS:</span>
+                  <div className="stack-tags">
+                    <span className="p-tag">LeetCode Rank 931</span>
+                    <span className="p-tag">Codeforces (sourcodes24)</span>
+                    <span className="p-tag">C++ STL</span>
+                    <span className="p-tag">Google Sheets DSA Sheet</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="modal-actions-row">
+                <a
+                  href="https://leetcode.com/u/sourishmusib/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="pixel-btn-action btn-gold"
+                >
+                  ⚡ VISIT LEETCODE PROFILE ↗
+                </a>
+                <a
+                  href="https://docs.google.com/spreadsheets/d/1ANEzJSdgeWEKKOZcmaRdQgj-D2k8r4BqAuAHaXwWXkI/edit?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="pixel-btn-action btn-blue"
+                >
+                  📊 OPEN DSA TRACKER SHEET ↗
+                </a>
+                <a
+                  href="https://codeforces.com/profile/sourcodes24"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="pixel-btn-action"
+                >
+                  ⚔️ CODEFORCES PROFILE ↗
+                </a>
               </div>
             </div>
           )}

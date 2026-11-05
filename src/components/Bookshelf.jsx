@@ -9,7 +9,10 @@ import {
   PixelFloppy,
   PixelBook,
   PixelController,
-  PixelStudyResources
+  PixelStudyResources,
+  PixelGoldenTrophy,
+  PixelSilverTrophy,
+  PixelWisprFlow
 } from './PixelIcons';
 
 export default function Bookshelf({ isDark, onOpenModal }) {
@@ -101,6 +104,58 @@ export default function Bookshelf({ isDark, onOpenModal }) {
 
   return (
     <aside className="pixel-bookshelf-unit" aria-label="Bookshelf Navigation">
+      {/* TWO TROPHIES & WISPR FLOW LOGO MOUNTED ABOVE BOOKSHELF */}
+      <div className="bookshelf-trophies-perch" aria-label="Achievements Showcase">
+        {/* LEFT/CENTER CLUSTER: GOLDEN & SILVER TROPHIES CLOSER TOGETHER */}
+        <div className="trophies-cluster">
+          {/* GOLDEN TROPHY: WINNER OF INNOVATE 2.0 HACKATHON 2024 */}
+          <button
+            type="button"
+            className="trophy-perch-btn trophy-golden"
+            onClick={() => onOpenModal('trophy-innovate')}
+            aria-label="Winner of INNOVATE 2.0 Hackathon 2024"
+          >
+            {/* HOVER PLAQUE DISPLAYED ABOVE TROPHY ONLY UPON HOVER */}
+            <div className="trophy-hover-plaque plaque-gold brass-textbox-plaque">
+              <span className="trophy-plaque-line">INNOVATE 2.0</span>
+              <span className="trophy-plaque-line">WINNER 2024</span>
+            </div>
+
+            <div className="trophy-icon-wrap">
+              <PixelGoldenTrophy size={42} />
+            </div>
+          </button>
+
+          {/* SILVER TROPHY: RANK 931 IN LEETCODE BIWEEKLY CONTEST */}
+          <button
+            type="button"
+            className="trophy-perch-btn trophy-silver"
+            onClick={() => onOpenModal('trophy-leetcode')}
+            aria-label="Rank 931 in LeetCode Biweekly Contest"
+          >
+            {/* HOVER PLAQUE DISPLAYED ABOVE TROPHY ONLY UPON HOVER */}
+            <div className="trophy-hover-plaque plaque-silver brass-textbox-plaque">
+              <span className="trophy-plaque-line">LEETCODE</span>
+              <span className="trophy-plaque-line">BIWEEKLY 931</span>
+            </div>
+
+            <div className="trophy-icon-wrap">
+              <PixelSilverTrophy size={42} />
+            </div>
+          </button>
+        </div>
+
+        {/* RIGHT CORNER: WISPR FLOW B&W LOGO */}
+        <div className="wispr-flow-corner-unit" aria-label="Wispr Flow" tabIndex={0} role="button">
+          <div className="wispr-hover-plaque">
+            <span>Thank you Wispr Flow.</span>
+          </div>
+          <div className="wispr-icon-wrap">
+            <PixelWisprFlow size={28} />
+          </div>
+        </div>
+      </div>
+
       {/* Bookshelf top header */}
       <div className="bookshelf-crest">
         <div className="crest-plaque brass-textbox-plaque">

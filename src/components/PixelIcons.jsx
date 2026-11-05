@@ -278,3 +278,129 @@ export function PixelStudyResources({ size = 36 }) {
     </svg>
   );
 }
+
+export function PixelGoldenTrophy({ size = 36 }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 20 20" fill="none" style={{ shapeRendering: 'crispEdges' }}>
+      {/* Sparkles around trophy */}
+      <rect x="2" y="2" width="1" height="2" fill="#fef08a" />
+      <rect x="1" y="3" width="3" height="1" fill="#fef08a" />
+      <rect x="17" y="1" width="1" height="2" fill="#fef08a" />
+      <rect x="16" y="2" width="3" height="1" fill="#fef08a" />
+
+      {/* Trophy Handles */}
+      <rect x="3" y="4" width="2" height="1" fill="#b45309" />
+      <rect x="2" y="5" width="2" height="4" fill="#f59e0b" />
+      <rect x="2" y="5" width="1" height="3" fill="#fde047" />
+      <rect x="3" y="8" width="2" height="1" fill="#b45309" />
+
+      <rect x="15" y="4" width="2" height="1" fill="#b45309" />
+      <rect x="16" y="5" width="2" height="4" fill="#f59e0b" />
+      <rect x="17" y="5" width="1" height="3" fill="#b45309" />
+      <rect x="15" y="8" width="2" height="1" fill="#b45309" />
+
+      {/* Trophy Cup Rim */}
+      <rect x="5" y="3" width="10" height="2" fill="#eab308" />
+      <rect x="6" y="3" width="8" height="1" fill="#fef08a" />
+      <rect x="5" y="4" width="10" height="1" fill="#ca8a04" />
+
+      {/* Trophy Bowl */}
+      <rect x="5" y="5" width="10" height="4" fill="#eab308" />
+      <rect x="6" y="5" width="3" height="4" fill="#fef08a" />
+      <rect x="13" y="5" width="2" height="4" fill="#a16207" />
+      <rect x="6" y="9" width="8" height="2" fill="#ca8a04" />
+      <rect x="7" y="11" width="6" height="2" fill="#a16207" />
+
+      {/* Star emblem on cup */}
+      <rect x="9" y="6" width="2" height="3" fill="#ffffff" />
+      <rect x="8" y="7" width="4" height="1" fill="#ffffff" />
+
+      {/* Stem */}
+      <rect x="9" y="13" width="2" height="2" fill="#854d0e" />
+      <rect x="8" y="14" width="4" height="1" fill="#ca8a04" />
+
+      {/* Wooden Pedestal Base */}
+      <rect x="6" y="15" width="8" height="2" fill="#2e1005" />
+      <rect x="5" y="17" width="10" height="2" fill="#170802" />
+      {/* Gold plaque on pedestal */}
+      <rect x="7" y="16" width="6" height="2" fill="#fbbf24" />
+      <rect x="8" y="16" width="4" height="1" fill="#fef08a" />
+    </svg>
+  );
+}
+
+export function PixelSilverTrophy({ size = 36 }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 20 20" fill="none" style={{ shapeRendering: 'crispEdges' }}>
+      {/* Sparkles around trophy */}
+      <rect x="2" y="2" width="1" height="2" fill="#ffffff" />
+      <rect x="1" y="3" width="3" height="1" fill="#ffffff" />
+      <rect x="17" y="1" width="1" height="2" fill="#ffffff" />
+      <rect x="16" y="2" width="3" height="1" fill="#ffffff" />
+
+      {/* Trophy Handles */}
+      <rect x="3" y="4" width="2" height="1" fill="#475569" />
+      <rect x="2" y="5" width="2" height="4" fill="#94a3b8" />
+      <rect x="2" y="5" width="1" height="3" fill="#f1f5f9" />
+      <rect x="3" y="8" width="2" height="1" fill="#475569" />
+
+      <rect x="15" y="4" width="2" height="1" fill="#475569" />
+      <rect x="16" y="5" width="2" height="4" fill="#94a3b8" />
+      <rect x="17" y="5" width="1" height="3" fill="#475569" />
+      <rect x="15" y="8" width="2" height="1" fill="#475569" />
+
+      {/* Trophy Cup Rim */}
+      <rect x="5" y="3" width="10" height="2" fill="#cbd5e1" />
+      <rect x="6" y="3" width="8" height="1" fill="#ffffff" />
+      <rect x="5" y="4" width="10" height="1" fill="#94a3b8" />
+
+      {/* Trophy Bowl */}
+      <rect x="5" y="5" width="10" height="4" fill="#cbd5e1" />
+      <rect x="6" y="5" width="3" height="4" fill="#f8fafc" />
+      <rect x="13" y="5" width="2" height="4" fill="#64748b" />
+      <rect x="6" y="9" width="8" height="2" fill="#94a3b8" />
+      <rect x="7" y="11" width="6" height="2" fill="#64748b" />
+
+      {/* LeetCode bracket emblem '< >' in cyan/silver */}
+      <rect x="8" y="6" width="1" height="3" fill="#38bdf8" />
+      <rect x="11" y="6" width="1" height="3" fill="#38bdf8" />
+      <rect x="9" y="7" width="2" height="1" fill="#ffffff" />
+
+      {/* Stem */}
+      <rect x="9" y="13" width="2" height="2" fill="#334155" />
+      <rect x="8" y="14" width="4" height="1" fill="#94a3b8" />
+
+      {/* Sleek Slate Pedestal Base */}
+      <rect x="6" y="15" width="8" height="2" fill="#0f172a" />
+      <rect x="5" y="17" width="10" height="2" fill="#020617" />
+      {/* Silver plaque on pedestal */}
+      <rect x="7" y="16" width="6" height="2" fill="#e2e8f0" />
+      <rect x="8" y="16" width="4" height="1" fill="#ffffff" />
+    </svg>
+  );
+}
+
+export function PixelWisprFlow({ size = 28 }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 16 16" fill="none" style={{ shapeRendering: 'crispEdges' }}>
+      {/* Black badge background with white pixel borders */}
+      <rect x="1" y="1" width="14" height="14" fill="#000000" />
+      <rect x="2" y="0" width="12" height="1" fill="#ffffff" />
+      <rect x="2" y="15" width="12" height="1" fill="#ffffff" />
+      <rect x="0" y="2" width="1" height="12" fill="#ffffff" />
+      <rect x="15" y="2" width="1" height="12" fill="#ffffff" />
+
+      {/* Wispr Flow stylized flowing lowercase 'f' glyph in crisp white */}
+      {/* Top curved hood */}
+      <rect x="7" y="3" width="5" height="2" fill="#ffffff" />
+      <rect x="11" y="4" width="2" height="2" fill="#ffffff" />
+      {/* Vertical stem */}
+      <rect x="7" y="5" width="2" height="7" fill="#ffffff" />
+      {/* Horizontal crossbar */}
+      <rect x="5" y="6" width="6" height="2" fill="#ffffff" />
+      {/* Bottom forward fluid curve */}
+      <rect x="7" y="12" width="3" height="1" fill="#ffffff" />
+      <rect x="9" y="11" width="2" height="1" fill="#ffffff" />
+    </svg>
+  );
+}
