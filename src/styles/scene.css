@@ -6,31 +6,31 @@
    THEME VARIABLES
    ------------------------------------------------------------ */
 .theme-dark {
-  --bg-wall: #17152b;
-  --bg-wall-stripe: #1f1c3a;
-  --floor-plank: #331c12;
-  --floor-grain: #27140b;
-  --wood-desk: #5d361c;
-  --wood-desk-dark: #442410;
-  --wood-desk-light: #7c4825;
-  --wood-shelf: #522f18;
-  --wood-shelf-dark: #371d0d;
-  --wood-shelf-border: #6d4022;
-  --wood-cubby-bg: #271409;
+  --bg-wall: #1e1b38;
+  --bg-wall-stripe: #28244b;
+  --floor-plank: #3e2417;
+  --floor-grain: #2d180e;
+  --wood-desk: #6b3e21;
+  --wood-desk-dark: #4e2b15;
+  --wood-desk-light: #8d532c;
+  --wood-shelf: #663b1f;
+  --wood-shelf-dark: #482613;
+  --wood-shelf-border: #824d29;
+  --wood-cubby-bg: #371d0e;
   --brass-metal: #c29532;
   --brass-dark: #8c671a;
-  --bar-bg: #0e0d18;
-  --bar-border: #2e2a4a;
+  --bar-bg: #141224;
+  --bar-border: #3d3763;
   --bar-text: #e2e8f0;
-  --crt-glow: rgba(57, 255, 20, 0.25);
+  --crt-glow: rgba(57, 255, 20, 0.2);
   --crt-screen-bg: #071307;
   --crt-text: #4ade80;
   --lamp-shade-color: #f7ca45;
   --lamp-shade-rim: #d19a17;
   --lamp-bulb-color: #fff9d2;
-  --lamp-glow-filter: drop-shadow(0 0 25px rgba(255, 215, 64, 0.75));
-  --window-frame: #442410;
-  --window-sill: #5d361c;
+  --lamp-glow-filter: none;
+  --window-frame: #4e2b15;
+  --window-sill: #6b3e21;
   --fairy-opacity: 0.95;
   --modal-bg: #1e1b30;
   --modal-border: #4f4779;
@@ -960,10 +960,10 @@
 .lamp-desk-reflection {
   position: absolute;
   bottom: -10px;
-  width: 80px;
-  height: 14px;
+  width: 70px;
+  height: 12px;
   border-radius: 50%;
-  background: radial-gradient(ellipse at center, rgba(255, 235, 120, 0.6) 0%, transparent 70%);
+  background: radial-gradient(ellipse at center, rgba(255, 235, 120, 0.25) 0%, transparent 70%);
   opacity: 0;
   transition: opacity 0.4s;
 }
@@ -972,51 +972,25 @@
   opacity: 1;
 }
 
-/* Volumetric Lamp Light Cone */
+/* Volumetric Lamp Light Cone - Removed light glare */
 .volumetric-lamp-beam {
-  position: absolute;
-  bottom: 12vh;
-  left: 2%;
-  width: 40vw;
-  max-width: 520px;
-  height: 55vh;
-  background: radial-gradient(
-    ellipse at 18% 30%,
-    rgba(255, 225, 90, 0.22) 0%,
-    rgba(255, 220, 70, 0.12) 35%,
-    rgba(255, 210, 50, 0.03) 70%,
-    transparent 90%
-  );
-  clip-path: polygon(14% 0%, 25% 0%, 95% 100%, 0% 100%);
-  pointer-events: none;
-  z-index: 22;
-  transition: opacity 0.5s ease-out;
+  display: none !important;
 }
 
 .beam-active {
-  opacity: 1;
+  opacity: 0;
 }
 .beam-hidden {
   opacity: 0;
 }
 
-/* Ambient dark vignette */
+/* Ambient dark vignette - Removed to maintain consistent room brightness in night mode */
 .dark-vignette-overlay {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  background: radial-gradient(
-    ellipse at 28% 60%,
-    transparent 15%,
-    rgba(6, 5, 15, 0.45) 55%,
-    rgba(4, 3, 10, 0.8) 100%
-  );
-  z-index: 23;
-  transition: opacity 0.5s ease-out;
+  display: none !important;
 }
 
 .vignette-active {
-  opacity: 1;
+  opacity: 0;
 }
 .vignette-hidden {
   opacity: 0;

@@ -51,10 +51,6 @@ export default function App() {
           isDark={isDark}
           onOpenModal={(tab) => setActiveModal(tab)}
         />
-
-        {/* LAMP LIGHT CONE & VOLUMETRIC ROOM ILLUMINATION */}
-        <div className={`volumetric-lamp-beam ${isDark ? 'beam-active' : 'beam-hidden'}`} aria-hidden="true"></div>
-        <div className={`dark-vignette-overlay ${isDark ? 'vignette-active' : 'vignette-hidden'}`} aria-hidden="true"></div>
       </main>
 
       {/* POPUP RETRO MODAL FOR ABOUT / PROJECTS / SKILLS / CONTACT */}
