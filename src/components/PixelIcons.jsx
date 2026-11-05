@@ -120,24 +120,40 @@ export function PixelGoogleSheets({ size = 32 }) {
   );
 }
 
-export function PixelMail({ size = 32, color = '#ffb347' }) {
+export function PixelMail({ size = 32, color = '#f59e0b' }) {
   return (
     <svg width={size} height={size} viewBox="0 0 16 16" fill="none" style={{ shapeRendering: 'crispEdges' }}>
-      {/* Envelope body */}
-      <rect x="1" y="3" width="14" height="10" fill={color} />
-      <rect x="2" y="4" width="12" height="8" fill="#fffdf0" />
-      {/* Flap lines */}
-      <rect x="2" y="4" width="2" height="1" fill={color} />
-      <rect x="12" y="4" width="2" height="1" fill={color} />
-      <rect x="4" y="5" width="2" height="1" fill={color} />
-      <rect x="10" y="5" width="2" height="1" fill={color} />
-      <rect x="6" y="6" width="4" height="1" fill={color} />
-      <rect x="7" y="7" width="2" height="1" fill="#e85d04" />
-      {/* Bottom fold line */}
-      <rect x="3" y="11" width="2" height="1" fill="#d97706" />
-      <rect x="11" y="11" width="2" height="1" fill="#d97706" />
-      <rect x="5" y="10" width="2" height="1" fill="#d97706" />
-      <rect x="9" y="10" width="2" height="1" fill="#d97706" />
+      {/* Outer dark outline of envelope */}
+      <rect x="1" y="3" width="14" height="10" fill="#181109" />
+
+      {/* Main envelope body (crisp white stationery) */}
+      <rect x="2" y="4" width="12" height="8" fill="#ffffff" />
+
+      {/* Lower envelope depth / paper shading */}
+      <rect x="2" y="8" width="12" height="4" fill="#f1f5f9" />
+
+      {/* Top flap diagonal folds */}
+      <rect x="2" y="4" width="2" height="1" fill="#d97706" />
+      <rect x="12" y="4" width="2" height="1" fill="#d97706" />
+      <rect x="3" y="5" width="2" height="1" fill="#d97706" />
+      <rect x="11" y="5" width="2" height="1" fill="#d97706" />
+      <rect x="5" y="6" width="2" height="1" fill="#d97706" />
+      <rect x="9" y="6" width="2" height="1" fill="#d97706" />
+      <rect x="7" y="7" width="2" height="1" fill="#d97706" />
+
+      {/* Flap interior warm paper tint */}
+      <rect x="4" y="5" width="8" height="1" fill="#fef3c7" />
+      <rect x="6" y="6" width="4" height="1" fill="#fef3c7" />
+
+      {/* Bottom corner fold diagonal creases */}
+      <rect x="2" y="11" width="2" height="1" fill="#cbd5e1" />
+      <rect x="12" y="11" width="2" height="1" fill="#cbd5e1" />
+      <rect x="4" y="10" width="2" height="1" fill="#cbd5e1" />
+      <rect x="10" y="10" width="2" height="1" fill="#cbd5e1" />
+      <rect x="6" y="9" width="4" height="1" fill="#cbd5e1" />
+
+      {/* Classic red wax letter seal in center */}
+      <rect x="7" y="6" width="2" height="2" fill="#dc2626" />
     </svg>
   );
 }
@@ -361,18 +377,17 @@ export function PixelSilverTrophy({ size = 36 }) {
       <rect x="6" y="9" width="8" height="2" fill="#94a3b8" />
       <rect x="7" y="11" width="6" height="2" fill="#64748b" />
 
-      {/* LeetCode bracket emblem '< >' in cyan/silver */}
-      <rect x="8" y="6" width="1" height="3" fill="#38bdf8" />
-      <rect x="11" y="6" width="1" height="3" fill="#38bdf8" />
-      <rect x="9" y="7" width="2" height="1" fill="#ffffff" />
+      {/* Star emblem on cup (matching golden trophy, clean white, no blue lines) */}
+      <rect x="9" y="6" width="2" height="3" fill="#ffffff" />
+      <rect x="8" y="7" width="4" height="1" fill="#ffffff" />
 
       {/* Stem */}
       <rect x="9" y="13" width="2" height="2" fill="#334155" />
       <rect x="8" y="14" width="4" height="1" fill="#94a3b8" />
 
-      {/* Sleek Slate Pedestal Base */}
-      <rect x="6" y="15" width="8" height="2" fill="#0f172a" />
-      <rect x="5" y="17" width="10" height="2" fill="#020617" />
+      {/* Wooden Pedestal Base */}
+      <rect x="6" y="15" width="8" height="2" fill="#2e1005" />
+      <rect x="5" y="17" width="10" height="2" fill="#170802" />
       {/* Silver plaque on pedestal */}
       <rect x="7" y="16" width="6" height="2" fill="#e2e8f0" />
       <rect x="8" y="16" width="4" height="1" fill="#ffffff" />

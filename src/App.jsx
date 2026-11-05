@@ -4,13 +4,11 @@ import Bookshelf from './components/Bookshelf';
 import StudyDesk from './components/StudyDesk';
 import WindowView from './components/WindowView';
 import WallDecor from './components/WallDecor';
-import PixelModal from './components/PixelModal';
 import './styles/global.css';
 import './styles/scene.css';
 
 export default function App() {
   const [isDark, setIsDark] = useState(true);
-  const [activeModal, setActiveModal] = useState(null);
   const [activeSection, setActiveSection] = useState(null);
 
   const toggleTheme = () => {
@@ -18,33 +16,24 @@ export default function App() {
   };
 
   const handleNavigation = (id) => {
-    // When clicking projects, skills, study-resources, or about, pan to the right side of the room
-    if (['projects', 'skills', 'about', 'study-resources'].includes(id)) {
-      setActiveSection(id);
-      setActiveModal(null); // No small modal window popup
-    } else {
-      setActiveModal(id);
-    }
+    // When clicking any bookshelf item or trophy, smoothly pan to the right room
+    setActiveSection(id);
   };
 
   const handleReturnToStudy = () => {
     setActiveSection(null);
   };
 
-  // Keyboard navigation: Escape key closes modal or returns to main study desk
+  // Keyboard navigation: Escape key returns to main study desk
   useEffect(() => {
     const handleKeyDown = (e) => {
-      if (e.key === 'Escape') {
-        if (activeSection) {
-          setActiveSection(null);
-        } else if (activeModal) {
-          setActiveModal(null);
-        }
+      if (e.key === 'Escape' && activeSection) {
+        setActiveSection(null);
       }
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [activeSection, activeModal]);
+  }, [activeSection]);
 
   return (
     <div className={`scene-viewport ${isDark ? 'theme-dark' : 'theme-light'}`}>
@@ -87,7 +76,7 @@ export default function App() {
           />
         </div>
 
-        {/* RIGHT ROOM VIEWPORT (PAN TARGET - KEPT EMPTY FOR NOW) */}
+        {/* RIGHT ROOM VIEWPORT (PAN TARGET - KEPT BLANK FOR NOW) */}
         <div
           className={`right-room-stage ${activeSection ? 'right-stage-active' : ''}`}
           aria-hidden={!activeSection}
@@ -107,21 +96,15 @@ export default function App() {
             </button>
           )}
 
-          {/* DISPLAY AREA FOR RIGHT ROOM - KEPT EMPTY FOR NOW AS REQUESTED */}
+          {/* DISPLAY AREA FOR RIGHT ROOM - KEPT BLANK FOR NOW AS REQUESTED */}
           <div
             className="right-room-content-area"
             data-section={activeSection}
           >
-            {/* Kept empty for now */}
+            {/* Blank screen for now */}
           </div>
         </div>
       </main>
-
-      {/* POPUP RETRO MODAL FOR TROPHIES ONLY */}
-      <PixelModal
-        activeTab={activeModal}
-        onClose={() => setActiveModal(null)}
-      />
     </div>
   );
 }
