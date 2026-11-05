@@ -780,12 +780,6 @@ export default function PixelModal({ activeTab, onClose }) {
             </div>
           )}
         </div>
-
-        {/* RETRO STATUS FOOTER */}
-        <div className="dialog-footer-status">
-          <span className="status-indicator">{meta.status}</span>
-          <span className="status-keyhint">PRESS [ESC] OR [X] TO CLOSE</span>
-        </div>
       </div>
     </div>
   );
