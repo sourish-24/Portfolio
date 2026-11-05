@@ -1,0 +1,35 @@
+/* ===== Hero ===== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 8rem 5% 4rem;
+  background: radial-gradient(ellipse at 50% 0%, #1a1040 0%, #0a0a0a 70%);
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.hero h1 span {
+  color: #6c63ff;
+}
+
+.hero .tagline {
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  color: #999;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}

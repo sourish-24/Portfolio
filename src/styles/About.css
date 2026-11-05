@@ -1,0 +1,39 @@
+/* ===== About ===== */
+.about {
+  padding: 5rem 5%;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.about-image {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #6c63ff, #48c6ef);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+.about-text p {
+  color: #aaa;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
